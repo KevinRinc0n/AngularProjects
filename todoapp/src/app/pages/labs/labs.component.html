@@ -1,0 +1,44 @@
+<h1>paco estudia en {{empresa}}</h1>
+
+<ul>
+  <li *ngFor="let task of tasks">
+    {{task}}
+  </li>
+</ul>
+
+<ul>
+  @for (task of tasks; track $index)
+  {
+    <li>
+      {{task}}
+    </li>
+  }
+</ul>
+
+<div>
+    <p>{{name}}</p>
+    <p>{{age}}</p>
+    <img [src]="logoNba" alt="" >
+</div>
+
+<div>
+    <p>nombre: {{persona[0].name}}</p>
+    <p>edad: {{persona[0].age}}</p>
+    <p>Equipo <br>
+    <img [src]="persona[0].team" alt="" >
+    </p>   
+</div>
+
+<div class="container">
+    <button (click)="clickHandler()">HACER CLICK</button>
+    <br>
+    <button (dblclick)="clickHandler()">HACER DOBLE CLICK</button>
+    <!-- <button (keydown.shift.t)="clickHandler()">HACER DOBLE CLICK</button> -->
+</div>
+
+<div>
+    <input (change)="changeHandler($event)" type="text">
+    <input (keydown)="keyDownHandler($event)" type="text">
+</div>
+
+<h2>{{'CampusLands'.repeat(3)}}</h2>
